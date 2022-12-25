@@ -30,7 +30,7 @@ void sigscanItems() {
     bool sigScanError = false;
     float percentage = 0;
 
-    glb::TDOL = *(TDObjectList**)(glb::moduleBase + 0x00456140);
+    glb::TDOL = *(TDObjectList**)(glb::moduleBase + 0x00432820);
     glb::game = (TDGame*)glb::TDOL;
     glb::scene = (TDScene*)glb::TDOL->objs[9];
     glb::renderer = (TDRenderer*)glb::TDOL->objs[8];
@@ -256,7 +256,7 @@ void sigscanItems() {
     printIntegPercentage(percentage);
     if (!glb::tdUpdateFunc) { sigScanError = true; }
 
-    glb::RegisterGameFunctions = (tRegisterGameFunctions)mem::FindPattern((PBYTE)"\x40\x57\x48\x83\xEC\x40\x48\xC7\x44\x24\x00\x00\x00\x00\x00\x48\x89\x5C\x24\x00\x48\x8D\x79\x30", "xxxxxxxxxx?????xxxx?xxxx", GetModuleHandle(NULL), &percentage);
+    glb::RegisterGameFunctions = (tRegisterGameFunctions)mem::FindPattern((PBYTE)"\x48\x89\x5C\x24\x08\x57\x48\x83\xEC\x30\x48\x8D", "xxxxxxxxxxxx", GetModuleHandle(NULL), &percentage);
     printf_s("RegisterGameFunctions           : %p", glb::RegisterGameFunctions);
     printIntegPercentage(percentage);
     if (!glb::RegisterGameFunctions) { sigScanError = true; }

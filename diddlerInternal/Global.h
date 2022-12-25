@@ -145,6 +145,12 @@ typedef bool(__fastcall* doQuicksave)(TDScene* a1);
 typedef bool(__fastcall* doQuickload)(TDScene* a1);
 typedef void* (__fastcall* validateFileExistance)(__int64 a1, void* a2, td::small_string* path);
 typedef char(__fastcall* loadTDBIN)(__int64 a1, td::small_string* a2);
+typedef void* (__fastcall* sub_140105F30)(TDScreen* screen, int a2);
+typedef void* (__fastcall* sub_140146470)(__int64 a1, __int64 a2);
+typedef void* (__fastcall* sub_140032EA0)(float* a1, __int64 a2, float* a3);
+typedef __int64(__fastcall* S140152540)(__int64 a1, __int64 a2, __int64 a3);
+typedef __int64(__fastcall* S1400C4F70)(__int64 a1, __int64 a2);
+typedef void* (__fastcall* S140152740)(void* a1);
 
 typedef void* (__fastcall* sub_140105F30)(TDScreen* screen, int a2);
 typedef void* (__fastcall* sub_140146470)(__int64 a1, __int64 a2);
